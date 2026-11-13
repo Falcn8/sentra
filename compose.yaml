@@ -1,0 +1,11 @@
+services:
+  sentra:
+    build: .
+    ports:
+      - "127.0.0.1:3000:3000"
+    volumes:
+      - sentra-data:/app/data
+    restart: unless-stopped
+    init: true
+volumes:
+  sentra-data:

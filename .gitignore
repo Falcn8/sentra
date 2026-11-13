@@ -1,0 +1,30 @@
+# Dependencies and build output
+node_modules/
+/dist/
+*.log
+
+# Local configuration and runtime data
+.env
+.env.*
+!.env.example
+/data/
+*.sqlite
+*.sqlite3
+*.db
+*.sqlite-*
+*.sqlite3-*
+*.db-*
+
+# Local tooling and review artifacts
+.DS_Store
+/test-results/
+/playwright-report/
+/.impeccable/
+/.impeccable.md
+
+# Historical design work and UI rollback snapshots
+/archive/
+/prototypes/
+/DESIGN.md
+/PRODUCT.md
+/scripts/restore-monitor-checkpoint.py

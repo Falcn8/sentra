@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#14181d" />
+    <style>
+      html, body { background: #14181d; color-scheme: dark; }
+      html[data-monitor-theme="light"], html[data-monitor-theme="light"] body { background: #f6f7f9; color-scheme: light; }
+    </style>
+    <script>
+      let theme = 'dark';
+      try { if (localStorage.getItem('sentra-monitor-theme') === 'light') theme = 'light'; } catch {}
+      document.documentElement.dataset.monitorTheme = theme;
+      document.querySelector('meta[name="theme-color"]').content = theme === 'dark' ? '#14181d' : '#f6f7f9';
+    </script>
+    <title>Sentra — Incident monitor</title>
+    <meta name="description" content="Your daily view of cybersecurity incidents across Japan and the world. Public reporting, connected in one place." />
+    <meta name="robots" content="noindex,nofollow" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body><div id="root"></div><script type="module" src="/src/main.tsx"></script></body>
+</html>
